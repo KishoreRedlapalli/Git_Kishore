@@ -1,0 +1,45 @@
+
+def main():
+    #print isprime(99)
+    limitfrprime(10)
+
+def isprime(n):
+    print "in is prime"
+    #checking for a +ve integer
+    n=abs(int(n))
+    # 0 and 1 are not primes
+    if n<2:
+        return False
+    # 2 is the only even prime number
+    if n==2:
+        return True
+    # all other even numbers are not primes
+    if not n&1:
+        print n&1
+        print "in n&1"
+        return False
+    
+    # range starts with 3 and only needs to go up the squareroot of n
+    # for all odd numbers
+    for x in range(3, int(n**0.5)+1, 2):
+        if n % x == 0:
+            return False
+    return True
+
+def limitfrprime(lmt):
+    print "printing prime numbers from 1 to "+str(lmt)
+    for i in range(2,lmt,1):
+        if isprime2(i):
+            print str(i) +" is a prime number "
+
+            
+            
+def isprime2(param):
+    for i in range(2,param,1):
+        print param
+    if param%i==0:
+       return False
+    return True       
+
+
+if __name__=="__main__":main()
