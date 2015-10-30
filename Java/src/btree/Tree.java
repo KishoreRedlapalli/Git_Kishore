@@ -99,8 +99,46 @@ public class Tree
         return first;
     }
 
-    public void delete(int id)
+    public boolean delete(int key) //deleting leafnode
     {
+        Node current=root;
+        Node parent=root;
+        boolean isLeftChild=true;
+        while (current.iData!=key) //search for node
+        {
+            parent=current;
+            if (key<current.iData)
+            {
+                isLeftChild=true;
+                current=current.leftChild;
+            }
+            else
+            {
+                isLeftChild=false;
+                current=current.rightChild;
+            }
+            if (current==null)
+            {
+                return false;
+            }
+            if (current.leftChild==null && current.rightChild==null)//root to be deleted, to be xplored
+            {
+                if (current==root)
+                {
+                    root=null;
+                }
+                else if(isLeftChild)
+                {
+                    parent.leftChild=null;
+                }
+                else
+                {
+                    parent.rightChild=null;
+                }
 
+            }
+
+        }
+        return true;
     }
 }
