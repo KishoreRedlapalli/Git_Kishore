@@ -28,7 +28,6 @@ public class Tree
         return current;
     }
 
-
     public void insert(int id,float dd)
     {
         Node newNode=new Node();
@@ -135,8 +134,9 @@ public class Tree
                 {
                     parent.rightChild=null;
                 }
-
             }
+            //code to Delete a Node with One Child
+
 
         }
         return true;
