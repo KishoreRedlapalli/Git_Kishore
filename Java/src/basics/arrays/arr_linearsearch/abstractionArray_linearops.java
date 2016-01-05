@@ -1,5 +1,7 @@
 package basics.arrays.arr_linearsearch;
 
+import java.util.Arrays;
+
 /**
  * Created with IntelliJ IDEA.
  * User: KishoreRP
@@ -7,11 +9,11 @@ package basics.arrays.arr_linearsearch;
  * Time: 6:26 PM
  * To change this template use File | Settings | File Templates.
  */
-public class highArray {
+public class abstractionArray_linearops {
     private long[] arr;
     private int nElems;
 
-    public highArray(int max) {
+    public abstractionArray_linearops(int max) {
         arr = new long[max];
         nElems = 0;
     }
@@ -69,20 +71,57 @@ public class highArray {
         }
         System.out.println("max element is "+max);
     }
+    public void removedups()
+    {
+        System.out.println("in remove dups method");
+        int j=0;
+        int i=1;
+        for(i=1;i<nElems;i++)
+        {
+            if (arr[i]==arr[i+1])
+            {
+                i++;
+            }
+            else
+            {
+                j++;
+                arr[j]=arr[i];
+                i++;
+
+            }
+        }
+        long[] B= Arrays.copyOf(arr,j+1);
+    }
+
+    public void countunique()
+    {
+        System.out.println("in count unique method");
+        int count=0;
+        for (int i=0;i<arr.length-1;i++)
+        {
+            if (arr[i]==arr[i+1])
+            {
+                count++;
+            }
+        }
+        System.out.println("Count of Unique elements is "+(arr.length-count));
+    }
 }
 class HighArrayApp
 {
     public static void main(String[] args)
     {
-        int maxSize=100;
-        highArray arr;
-        arr =new highArray(maxSize);
+        int maxSize=20;
+        abstractionArray_linearops arr;
+        arr =new abstractionArray_linearops(maxSize);
+
         arr.insert(100);
         arr.insert(77);
         arr.insert(1002);
         arr.insert(99);
         arr.insert(44);
         arr.insert(55);
+        arr.insert(10055);
         arr.insert(22);
         arr.insert(88);
         arr.insert(11);
@@ -90,9 +129,10 @@ class HighArrayApp
         arr.insert(66);
         arr.insert(33);
         arr.insert(1002);
-        arr.insert(10055);
+
         arr.display();
         arr.getmax();
+        arr.countunique();
 
 
     }
