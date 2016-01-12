@@ -90,7 +90,11 @@ public class abstractionArray_linearops {
 
             }
         }
-        long[] B= Arrays.copyOf(arr,j+1);
+        long[] nodupsarray= Arrays.copyOf(arr,j+1);
+        for (int i1=0;i1<nodupsarray.length;i1++)
+        {
+            System.out.println(nodupsarray[i1]+"\t");
+        }
     }
 
     public void countunique()
@@ -106,6 +110,7 @@ public class abstractionArray_linearops {
         }
         System.out.println("Count of Unique elements is "+(arr.length-count));
     }
+
 }
 class HighArrayApp
 {
@@ -130,9 +135,10 @@ class HighArrayApp
         arr.insert(33);
         arr.insert(1002);
 
-        arr.display();
+        //arr.display();
         arr.getmax();
         arr.countunique();
+        arr.removedups();
 
 
     }

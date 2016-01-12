@@ -45,4 +45,9 @@ class OrdArray {
             nElems++;
         }
     }
+
+    public void delete(long value)
+    {
+
+    }
 }

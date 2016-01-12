@@ -1,4 +1,4 @@
-package Iview.Prime;
+package Iview.Prime1;
 
 import java.util.*;
 

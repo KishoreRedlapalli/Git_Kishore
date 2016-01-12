@@ -1,5 +1,5 @@
 package basics.arrays.arr_linearsearch;
-/*public class lowArrayApp
+public class lowArrayApp
 {
     public static void main(String[] args)
     {
@@ -54,4 +54,4 @@ package basics.arrays.arr_linearsearch;
             System.out.println(arr.getElement(j)+" ");
         }
     }
-} */
+}
