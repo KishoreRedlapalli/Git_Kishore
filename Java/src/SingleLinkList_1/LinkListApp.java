@@ -17,5 +17,25 @@ public class LinkListApp {
             System.out.println("\n");
         }
         theList.displayList();*/
+        Link find_item=theList.find(10);
+        if (find_item!=null)
+        {
+            System.out.println("Found item with Key "+find_item.iData);
+        }
+        else
+        {
+            System.out.println("Cannot find the link");
+        }
+
+        Link tbdeleted_item=theList.delete(100);
+        if (tbdeleted_item!=null)
+        {
+            System.out.println("deleted item");
+        }
+        else
+        {
+            System.out.println("Cannot delete since the link is not existing");
+        }
+        theList.displayList();
     }
 }
