@@ -10,12 +10,12 @@ public class LinkListApp {
         theList.insertFirst(2, 4.6);
         theList.insertFirst(3, 6.9);
         theList.displayList();
-        while (!theList.isEmpty()) {
+        /*while (!theList.isEmpty()) {
             Link aLink = theList.deleteFirst();
             System.out.println("deleted");
             aLink.displayLink();
             System.out.println("\n");
         }
-        theList.displayList();
+        theList.displayList();*/
     }
 }
